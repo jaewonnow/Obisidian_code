@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Extension</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>My Extension</h1>
+            <p class="subtitle">크롬 확장 프로그램</p>
+        </header>
+        
+        <main class="main-content">
+            <div class="feature-section">
+                <h2>기능</h2>
+                <div class="button-group">
+                    <button id="notifyBtn" class="btn btn-primary">
+                        알림 보내기
+                    </button>
+                    <button id="searchBtn" class="btn btn-secondary">
+                        단어 검색
+                    </button>
+                </div>
+            </div>
+            
+            <div class="search-section">
+                <h3>단어 검색</h3>
+                <div class="input-group">
+                    <input type="text" id="searchInput" placeholder="검색할 단어를 입력하세요">
+                    <button id="searchSubmit" class="btn btn-small">검색</button>
+                </div>
+                <div id="searchResult" class="search-result"></div>
+            </div>
+            
+            <div class="dday-section">
+                <h3>D-Day 계산기</h3>
+                <div class="dday-input-group">
+                    <div class="input-row">
+                        <label for="ddayName">이벤트명:</label>
+                        <input type="text" id="ddayName" placeholder="예: 시험, 생일, 프로젝트 마감">
+                    </div>
+                    <div class="input-row">
+                        <label for="ddayDate">목표 날짜:</label>
+                        <input type="date" id="ddayDate">
+                    </div>
+                    <div class="input-row">
+                        <label for="ddayTime">목표 시간:</label>
+                        <input type="time" id="ddayTime" value="23:59">
+                    </div>
+                    <button id="calculateDday" class="btn btn-primary">D-Day 계산</button>
+                </div>
+                <div id="ddayResult" class="dday-result"></div>
+                <div class="dday-list">
+                    <h4>저장된 D-Day</h4>
+                    <div id="ddayList" class="dday-items"></div>
+                </div>
+            </div>
+            
+            <div class="settings-section">
+                <h3>설정</h3>
+                <div class="setting-item">
+                    <label for="autoNotify">
+                        <input type="checkbox" id="autoNotify">
+                        자동 알림 활성화
+                    </label>
+                </div>
+                <div class="setting-item">
+                    <label for="notifyInterval">
+                        알림 간격 (분):
+                        <input type="number" id="notifyInterval" value="5" min="1" max="60">
+                    </label>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <p>버전 1.0</p>
+        </footer>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>

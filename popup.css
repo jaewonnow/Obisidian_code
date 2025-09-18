@@ -1,0 +1,444 @@
+/* 기본 스타일 리셋 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 350px;
+    min-height: 500px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* 헤더 스타일 */
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* 메인 콘텐츠 */
+.main-content {
+    padding: 20px;
+}
+
+.feature-section,
+.search-section,
+.dday-section,
+.settings-section {
+    margin-bottom: 25px;
+}
+
+.feature-section h2,
+.search-section h3,
+.dday-section h3,
+.settings-section h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* 버튼 스타일 */
+.button-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 120px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+    background: #f8f9fa;
+    color: #333;
+    border: 2px solid #e9ecef;
+}
+
+.btn-secondary:hover {
+    background: #e9ecef;
+    transform: translateY(-2px);
+}
+
+.btn-small {
+    padding: 8px 16px;
+    font-size: 12px;
+    min-width: auto;
+}
+
+/* 입력 그룹 */
+.input-group {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* 검색 결과 */
+.search-result {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.result-item h4 {
+    color: #667eea;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.result-item p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.error {
+    color: #dc3545;
+    font-weight: 500;
+}
+
+/* 설정 섹션 */
+.setting-item {
+    margin-bottom: 15px;
+}
+
+.setting-item label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+
+.setting-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #667eea;
+}
+
+.setting-item input[type="number"] {
+    width: 60px;
+    padding: 6px;
+    border: 2px solid #e9ecef;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.setting-item input[type="number"]:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+/* 푸터 */
+.footer {
+    background: #f8f9fa;
+    padding: 15px 20px;
+    text-align: center;
+    border-top: 1px solid #e9ecef;
+}
+
+.footer p {
+    color: #666;
+    font-size: 12px;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 400px) {
+    .container {
+        width: 100%;
+        border-radius: 0;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .btn {
+        min-width: auto;
+    }
+}
+
+/* D-Day 섹션 스타일 */
+.dday-input-group {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.input-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.input-row:last-child {
+    margin-bottom: 0;
+}
+
+.input-row label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.input-row input {
+    padding: 10px;
+    border: 2px solid #e9ecef;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.input-row input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.dday-result {
+    margin-top: 15px;
+}
+
+.dday-success {
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.dday-success h4 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.dday-today {
+    background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.dday-today h4 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.dday-past {
+    background: linear-gradient(135deg, #9E9E9E 0%, #757575 100%);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.dday-past h4 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.dday-list h4 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.dday-items {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.dday-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    border-left: 4px solid;
+    transition: all 0.3s ease;
+}
+
+.dday-item-future {
+    background: #e8f5e8;
+    border-left-color: #4CAF50;
+}
+
+.dday-item-today {
+    background: #fff3e0;
+    border-left-color: #FF9800;
+}
+
+.dday-item-past {
+    background: #f5f5f5;
+    border-left-color: #9E9E9E;
+}
+
+.dday-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dday-item-content {
+    flex: 1;
+}
+
+.dday-item-content h5 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.dday-date {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.dday-status {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.dday-item-future .dday-status {
+    color: #4CAF50;
+}
+
+.dday-item-today .dday-status {
+    color: #FF9800;
+}
+
+.dday-item-past .dday-status {
+    color: #9E9E9E;
+}
+
+.delete-btn {
+    background: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+    background: #cc0000;
+    transform: scale(1.1);
+}
+
+.no-items {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    padding: 20px;
+}
+
+/* 애니메이션 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main-content > * {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.main-content > *:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.main-content > *:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.main-content > *:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.main-content > *:nth-child(5) {
+    animation-delay: 0.4s;
+}
