@@ -68,9 +68,11 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
 
 // 알림 보내기 함수
 function sendNotification(message) {
+    // data URL로 간단한 아이콘 대체 (48x48 PNG)
+    const iconDataUrl = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAIElEQVRoge3BAQ0AAADCoPdPbQ8HFAAAAAAAAAAAAAAAwK8Gg9gAATs9m+IAAAAASUVORK5CYII=';
     chrome.notifications.create({
         type: 'basic',
-        iconUrl: 'icons/icon48.png',
+        iconUrl: iconDataUrl,
         title: 'My Extension',
         message: message || '알림이 전송되었습니다!'
     });

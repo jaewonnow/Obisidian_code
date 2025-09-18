@@ -49,9 +49,10 @@ function setupEventListeners() {
 // 알림 보내기 기능
 function sendNotification() {
     if (chrome.notifications) {
+        const iconDataUrl = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAIElEQVRoge3BAQ0AAADCoPdPbQ8HFAAAAAAAAAAAAAAAwK8Gg9gAATs9m+IAAAAASUVORK5CYII=';
         chrome.notifications.create({
             type: 'basic',
-            iconUrl: 'icons/icon48.png',
+            iconUrl: iconDataUrl,
             title: 'My Extension',
             message: '알림이 전송되었습니다!'
         });
